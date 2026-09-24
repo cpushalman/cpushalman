@@ -55,7 +55,7 @@ if not os.path.exists(DEFAULT_FONT):
 
 FONT_PATH = os.environ.get("WORDMARK_FONT", DEFAULT_FONT)
 FONT_INDEX = int(os.environ.get("WORDMARK_FONT_INDEX", DEFAULT_INDEX))   # face within a .ttc
-TEXT = os.environ.get("WORDMARK_TEXT", "HARSHIT")
+TEXT = os.environ.get("WORDMARK_TEXT", "AHAMED")
 
 MASK_H = 320           # glyph raster height in mask px (drives voxel density)
 TRACKING = 0.18        # extra letter-spacing, in em. keeps letters clearly separated
@@ -253,8 +253,9 @@ def emit(frames, mode, out, dur, reveal):
     ]
     for i, dot in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
         p.append(f'<circle cx="{PAD + i*15}" cy="{TITLEBAR_H/2}" r="4.5" fill="{dot}"/>')
+    user_handle = os.environ.get("GH_PROFILE_USER", "cpushalman")
     p.append(f'<text x="{canvas_w/2:.0f}" y="{TITLEBAR_H/2 + 4:.0f}" fill="{TITLE_TEXT}" '
-             f'font-size="11.5" text-anchor="middle">harshit@github: ~$ ./wordmark.sh --3d</text>')
+             f'font-size="11.5" text-anchor="middle">{user_handle}@github: ~$ ./wordmark.sh --3d</text>')
 
     def frame_g(rows, extra=""):
         out_rows = []

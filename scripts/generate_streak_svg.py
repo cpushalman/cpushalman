@@ -6,13 +6,20 @@ Usage: python generate_streak_svg.py [username] [output.svg]
 import sys, json, os, datetime, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-USER = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("GH_PROFILE_USER", "hxrshityadav")
+USER = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("GH_PROFILE_USER", "cpushalman")
 OUT  = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "contrib-heatmap.svg")
 
 def get_data(user):
     url = f"https://github-contributions-api.jogruber.de/v4/{user}?y=last"
     try:
-        with urllib.request.urlopen(url, timeout=25) as r:
+        ctx = None
+        try:
+            import ssl, certifi
+            ctx = ssl.create_default_context(cafile=certifi.where())
+        except Exception:
+            pass
+        req = urllib.request.Request(url, headers={"User-Agent": "profile-readme-bot/1.0"})
+        with urllib.request.urlopen(req, timeout=25, context=ctx) as r:
             return json.loads(r.read().decode())
     except Exception as e:
         # fallback to local data if the API is unreachable
