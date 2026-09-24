@@ -36,10 +36,10 @@
 
 <p><b>Dev · Cybersecurity · Full Stack</b></p>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-portfolio.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-handle-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/handle)
+[![Portfolio](https://img.shields.io/badge/Portfolio-portfolio.dev-0d1117?style=for-the-badge&logo=vercel&logoColor=white)](https://www.shalman.tech/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-handle-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://in.linkedin.com/in/ahamed-shalman-h-a685b5246)
 [![X](https://img.shields.io/badge/X-handle-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/handle)
-[![Instagram](https://img.shields.io/badge/Instagram-handle-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/handle)
+[![Instagram](https://img.shields.io/badge/Instagram-handle-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_shalman._/)
 
 <br>
 
